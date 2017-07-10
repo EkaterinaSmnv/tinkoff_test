@@ -30,7 +30,7 @@ public abstract class AbstractPage {
 	}
 	
 	protected WebElement findElementWithWait(By by) {
-    	WebDriverWait wait = new WebDriverWait(driver, 30);
+    	WebDriverWait wait = new WebDriverWait(driver, 60);
     	return wait.until(ExpectedConditions.presenceOfElementLocated(by));
     }
 	
@@ -58,13 +58,13 @@ public abstract class AbstractPage {
 	}
 	
 	protected void clickElement(WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 		element.click();
 	}
 	
 	protected void waitVisibleOf(WebElement element ) {
-		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 }
