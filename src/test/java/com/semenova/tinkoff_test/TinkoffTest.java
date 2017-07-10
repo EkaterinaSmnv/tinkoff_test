@@ -47,7 +47,6 @@ public class TinkoffTest
     
     @Before
     public void openBrowser() {
-    	System.setProperty("webdriver.gecko.driver","C:\\Development\\JAVA\\geckodriver.exe");
         System.setProperty("webdriver.chrome.driver","C:\\Development\\JAVA\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
